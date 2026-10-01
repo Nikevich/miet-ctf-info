@@ -21,13 +21,13 @@
 - [HTB](https://www.hackthebox.com/) одна из самых известных платформ. Но не доступна из РФ, придется напрячься с КВн.
 
 Linux:
-- Базовая тренировка Linux [https://linuxcheat.ru/terminal](https://linuxcheat.ru/terminal). Здесь можно потренить терминальные команды Linux. Полезный навых, чтобы не тупить и не путаться в командной строке.
+- Базовая тренировка Linux [https://linuxcheat.ru/terminal](https://linuxcheat.ru/terminal). Здесь можно потренить терминальные команды Linux. Полезный навык, чтобы не тупить и не путаться в командной строке.
 
 ## Теория
 
 Под рукой должна быть таблица [MITRE ATT&CK](https://attack.mitre.org/). Полезная теория, но **обязательно подкрепляйте практикой**.
 
-В [этом](https://github.com/Swfuse/devops-interview/tree/main) репозитории акцент делается на собесы для DevOps, но здесь очень хорошо расписаны технические знания по такми технологиям, как Docker, Clouds, Kubernetes.
+В [этом](https://github.com/Swfuse/devops-interview/tree/main) репозитории акцент делается на собесы для DevOps, но здесь очень хорошо расписаны технические знания по таким технологиям, как Docker, Clouds, Kubernetes.
 
 ## Мануалы
 
