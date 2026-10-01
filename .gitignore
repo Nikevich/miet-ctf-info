@@ -1,0 +1,17 @@
+# Секреты и локальные настройки
+.env
+.env.*
+*.pem
+*.key
+*.p12
+
+# Системные файлы и редакторы
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Python / Node.js
+__pycache__/
+*.py[cod]
+node_modules/
