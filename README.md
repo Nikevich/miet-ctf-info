@@ -9,7 +9,8 @@
 - [`competitions/`](competitions/) — карточки прошедших и будущих CTF;
 - [`writeups/`](writeups/) — разборы заданий и решений;
 - [`resources/`](resources/) — ссылки на платформы, инструменты и учебные материалы;
-- [`lessons/`](lessons/) — материалы и заметки по занятиям.
+- [`lessons/`](lessons/) — материалы и заметки по занятиям;
+- [`entertainments/`](entertainments/) - развлекательный контент.
 
 ## Как добавить материал
 
