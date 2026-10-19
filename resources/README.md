@@ -34,3 +34,7 @@ Linux:
 ## Мануалы
 
 Добавлен [мануал](kali-linux/%D0%A3%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0%20VirtualBox.docx) по установке Kali Linux.
+
+[Мануал](kali-linux/kali-gng-keys-error.md) по решению проблемы с gng ключами в Kali. ошибка выглядит примерно так:
+
+![Ошибка gng ключей Kali](images/kali-gng-keys-error.jpg)
