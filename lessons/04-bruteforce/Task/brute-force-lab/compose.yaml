@@ -1,0 +1,17 @@
+services:
+  training-login:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ctf-training-login:local
+    container_name: ctf-training-login
+    ports:
+      - "0.0.0.0:8080:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    restart: unless-stopped
