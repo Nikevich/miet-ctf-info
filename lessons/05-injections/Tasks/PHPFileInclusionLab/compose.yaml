@@ -1,0 +1,32 @@
+services:
+  app:
+    build: .
+    ports:
+      - "0.0.0.0:8082:80"
+    environment:
+      DB_DSN: pgsql:host=db;port=5432;dbname=php_injection_lab
+      DB_USER: ctfapp
+      DB_PASSWORD: ctfapp_dev_only
+    depends_on:
+      db:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: php_injection_lab
+      POSTGRES_USER: ctfapp
+      POSTGRES_PASSWORD: ctfapp_dev_only
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ctfapp -d php_injection_lab"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  postgres_data:
