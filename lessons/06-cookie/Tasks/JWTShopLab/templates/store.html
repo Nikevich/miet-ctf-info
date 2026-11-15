@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div>
+        <p class="eyebrow">CTF · JWT SHOP</p>
+        <h1>Каталог товаров</h1>
+      </div>
+      <nav class="actions">
+        <a class="button-link secondary" href="/users">Пользователи</a>
+        <form method="post" action="/logout"><button class="secondary" type="submit">Выйти</button></form>
+      </nav>
+    </header>
+
+    <section class="balance panel">
+      <div>
+        <p class="muted">Покупатель</p>
+        <h2>{{login}}</h2>
+      </div>
+      <div class="money">
+        <p class="muted">Счёт в БД</p>
+        <strong>${{balance}}</strong>
+      </div>
+    </section>
+
+    {{error}}
+    {{success}}
+    {{receipt}}
+
+    <section class="products">
+      {{products}}
+    </section>
+  </main>
+</body>
+</html>

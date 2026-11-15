@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{.Title}}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div>
+        <p class="eyebrow">CTF · COOKIE SHOP</p>
+        <h1>Каталог товаров</h1>
+      </div>
+      <form method="post" action="/logout"><button class="secondary" type="submit">Выйти</button></form>
+    </header>
+
+    <section class="balance panel">
+      <div>
+        <p class="muted">Покупатель</p>
+        <h2>{{.Login}}</h2>
+      </div>
+      <div class="money">
+        <p class="muted">Доступно</p>
+        <strong>${{.Balance}}</strong>
+      </div>
+    </section>
+
+    {{if .Error}}<p class="notice error" role="alert">{{.Error}}</p>{{end}}
+    {{if .Success}}<p class="notice success">{{.Success}}</p>{{end}}
+    {{if .Purchased}}
+      <section class="panel receipt">
+        <p class="eyebrow">ПОКУПКА ПОДТВЕРЖДЕНА</p>
+        <h2>{{.Purchased.Name}}</h2>
+        {{if .Purchased.Flag}}<code>{{.Purchased.Flag}}</code>{{else}}<p>Товар добавлен в вашу коллекцию.</p>{{end}}
+      </section>
+    {{end}}
+
+    <section class="products">
+      {{range .Products}}
+      <article class="panel product">
+        <p class="tag">{{.ID}}</p>
+        <h2>{{.Name}}</h2>
+        <p class="lead">{{.Description}}</p>
+        <div class="product-bottom">
+          <strong>${{.Price}}</strong>
+          <form method="post" action="/buy">
+            <input type="hidden" name="product" value="{{.ID}}">
+            <button type="submit">Купить</button>
+          </form>
+        </div>
+      </article>
+      {{end}}
+    </section>
+  </main>
+</body>
+</html>

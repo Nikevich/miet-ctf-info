@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{.Title}}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="centered">
+  <main class="panel auth-panel">
+    <p class="eyebrow">CTF · COOKIE SHOP</p>
+    <h1>Создание аккаунта</h1>
+    <p class="lead">Каждому новому пользователю начисляется $10 000.</p>
+    {{if .Error}}<p class="notice error" role="alert">{{.Error}}</p>{{end}}
+    <form method="post" action="/signup">
+      <label for="login">Логин</label>
+      <input id="login" name="login" minlength="3" required autofocus>
+      <label for="password">Пароль</label>
+      <input id="password" name="password" type="password" minlength="4" required>
+      <button type="submit">Создать аккаунт</button>
+    </form>
+    <p class="hint">Уже есть профиль? <a href="/login">Войти</a></p>
+  </main>
+</body>
+</html>

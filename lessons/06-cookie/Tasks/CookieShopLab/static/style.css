@@ -1,0 +1,37 @@
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; padding: 48px 24px; background: #101820; color: #e9f3f7; font: 16px/1.45 Arial, sans-serif; }
+.centered { display: grid; place-items: center; padding: 24px; }
+.page { width: min(100%, 980px); margin: 0 auto; }
+.panel { padding: 26px; border: 1px solid #2f495b; border-radius: 14px; background: #182733; box-shadow: 0 18px 48px #0008; }
+.auth-panel { width: min(100%, 440px); }
+.top, .balance, .product-bottom { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.top { margin-bottom: 24px; }
+.eyebrow, .tag { margin: 0 0 8px; color: #53c7e8; font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+.tag { color: #91aab7; }
+h1, h2 { margin: 0 0 9px; }
+h1 { font-size: 1.85rem; }
+h2 { font-size: 1.25rem; }
+.lead, .muted, .hint { color: #b7cbd5; }
+.hint { margin: 22px 0 0; font-size: .9rem; }
+label { display: block; margin: 16px 0 7px; font-weight: 700; }
+input { width: 100%; padding: 11px 12px; border: 1px solid #406074; border-radius: 8px; background: #101820; color: inherit; font: inherit; }
+input:focus { outline: 2px solid #53c7e8; outline-offset: 1px; }
+button { margin-top: 20px; padding: 11px 16px; border: 0; border-radius: 8px; background: #53c7e8; color: #10212b; cursor: pointer; font: 700 .95rem Arial, sans-serif; }
+button:hover { background: #8bdcf1; }
+.secondary { margin: 0; border: 1px solid #406074; background: transparent; color: #e9f3f7; }
+.balance { margin-bottom: 22px; }
+.money { text-align: right; }
+.money strong { color: #8bdcf1; font-size: 1.7rem; }
+.products { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.product { min-height: 230px; display: flex; flex-direction: column; }
+.product .lead { flex: 1; }
+.product-bottom form { margin: 0; }
+.product-bottom button { margin: 0; }
+.notice { margin: 0 0 20px; padding: 12px 14px; border-radius: 8px; }
+.error { border-left: 3px solid #ef7d7d; background: #3a2429; color: #ffd9d9; }
+.success { border-left: 3px solid #65d6a2; background: #173b32; color: #d2fae6; }
+.receipt { margin: 0 0 22px; }
+code { display: inline-block; padding: 9px 11px; border-radius: 7px; background: #101820; color: #8bdcf1; overflow-wrap: anywhere; }
+a { color: #8bdcf1; }
+@media (max-width: 650px) { .top, .balance, .product-bottom { align-items: flex-start; flex-direction: column; } .money { text-align: left; } .products { grid-template-columns: 1fr; } }

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <div>
+        <p class="eyebrow">CTF · JWT SHOP</p>
+        <h1>Пользователи и счета</h1>
+      </div>
+      <nav class="actions">
+        <a class="button-link secondary" href="/">Каталог</a>
+        <form method="post" action="/logout"><button class="secondary" type="submit">Выйти</button></form>
+      </nav>
+    </header>
+
+    <section class="panel">
+      <p class="muted">Текущая сессия: {{login}}</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Логин</th>
+            <th>Счёт</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{users}}
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

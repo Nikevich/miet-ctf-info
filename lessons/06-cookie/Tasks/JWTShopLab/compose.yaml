@@ -1,0 +1,7 @@
+services:
+  jwt-shop-lab:
+    build: .
+    container_name: jwt-shop-lab
+    ports:
+      - "0.0.0.0:8084:8080"
+    restart: unless-stopped

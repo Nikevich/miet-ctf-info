@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="centered">
+  <main class="panel auth-panel">
+    <p class="eyebrow">CTF · JWT SHOP</p>
+    <h1>Вход</h1>
+    <p class="lead">Авторизуйтесь, чтобы открыть каталог товаров.</p>
+    {{error}}
+    <form method="post" action="/login">
+      <label for="login">Логин</label>
+      <input id="login" name="login" autocomplete="username" required>
+      <label for="password">Пароль</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <button type="submit">Войти</button>
+    </form>
+    <p class="hint">Нет аккаунта? <a href="/signup">Создать пользователя</a></p>
+  </main>
+</body>
+</html>
